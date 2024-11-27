@@ -17,4 +17,5 @@ for i in range(len(boxes)):
 
 cv2.imwrite('ex2_output.jpg',img_2)
 cv2.imshow('sample',img_2)
+##ユーザーがキーを押すまで待機
 cv2.waitKey(0)
