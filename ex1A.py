@@ -28,6 +28,13 @@ for i in range(keypoints.data[0].size(0)-5):
         img,(int(keypoints.data[0][i+5][0]), int(keypoints.data[0][i+5][1])),6,(0,225,255),-1
     )
 
+selected_keypoints = [5, 6, 11, 12]
+points = [keypoints.data[0][i] for i in selected_keypoints]
+
+centroid_x = np.mean([point[0] for point in points])
+centroid_y = np.mean([point[1] for point in points])
+
+cv2.circle(img, (int(centroid_x), int(centroid_y)), 6, (0, 255, 255), -1)  
 
 cv2.imwrite('ex1A_output.jpg',img)
 cv2.imshow('sample',img)
