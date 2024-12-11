@@ -1,6 +1,7 @@
 import cv2
 from ultralytics import YOLO
 import numpy as np
+import math
 
 model = YOLO("yolov8x-pose.pt")
 img = cv2.imread('ex1.jpg')
@@ -14,6 +15,7 @@ skeleton = np.array([
             [12,11],[12,6],[11,5],[6,5],
             [6,8],[5,7],[8,10],[7,9],[5,12],[6,11]
             ])
+
 
 for i in range(len(skeleton)):
     cv2.line(img,
