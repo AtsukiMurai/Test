@@ -1,7 +1,7 @@
 import cv2
 from ultralytics import YOLO
 import numpy as np
-import math
+
 
 model = YOLO("yolov8x-pose.pt")
 img = cv2.imread('ex1.jpg')
